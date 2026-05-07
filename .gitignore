@@ -6,3 +6,7 @@ test-results/
 playwright-report/
 *.tar.gz
 benchmark-results/*.json
+*.tar.gz
+load-test-results.json
+ws-load-results.json
+C:\\*
