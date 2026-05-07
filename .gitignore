@@ -5,3 +5,4 @@ benchmark-results/
 test-results/
 playwright-report/
 *.tar.gz
+benchmark-results/*.json
