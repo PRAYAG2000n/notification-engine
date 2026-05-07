@@ -1,0 +1,43 @@
+
+> realtime-notification-engine@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+[Redis] Connected
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                               Size     First Load JS
+┌ ƒ /                                     138 B          87.4 kB
+├ ○ /_not-found                           873 B          88.1 kB
+├ ○ /api/health                           0 B                0 B
+├ ○ /dashboard                            20.5 kB         148 kB
+└ ○ /login                                2.18 kB         107 kB
++ First Load JS shared by all             87.3 kB
+  ├ chunks/117-6c4027a890496c06.js        31.7 kB
+  ├ chunks/fd9d1056-f07bea1accdac97b.js   53.6 kB
+  └ other shared chunks (total)           1.89 kB
+
+Route (pages)                             Size     First Load JS
+┌ ƒ /api/auth/[...nextauth]               0 B            80.8 kB
+├ ƒ /api/events/publish                   0 B            80.8 kB
+└ ƒ /api/trpc/[trpc]                      0 B            80.8 kB
++ First Load JS shared by all             80.8 kB
+  ├ chunks/framework-f66176bb897dc684.js  44.8 kB
+  ├ chunks/main-1150dca7ff468602.js       34.1 kB
+  └ other shared chunks (total)           1.87 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

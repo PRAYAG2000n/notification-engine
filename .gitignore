@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env
+benchmark-results/
+test-results/
+playwright-report/
+*.tar.gz

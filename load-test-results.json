@@ -1,0 +1,13 @@
+{
+  "totalVUs": 200,
+  "connectionTime": {
+    "avg": "0.00",
+    "p95": "0.00"
+  },
+  "messageLatency": {
+    "avg": "0.00",
+    "p95": "0.00"
+  },
+  "messagesReceived": 0,
+  "checksPassRate": "0.00%"
+}
