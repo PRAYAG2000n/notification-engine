@@ -1,10 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "=========================================="
-echo "  NotifyHub - Full Benchmark Suite"
-echo "=========================================="
 
+echo "  NotifyHub - Full Benchmark Suite"
 RESULTS_DIR="./benchmark-results"
 mkdir -p "$RESULTS_DIR"
 
@@ -27,9 +25,6 @@ kill_port() {
   fi
 }
 
-# ==========================================
-# [1/4] Bundle Analysis
-# ==========================================
 echo ""
 echo "[1/4] Analyzing bundle size..."
 npm run build 2>&1 | tail -30
@@ -61,9 +56,6 @@ cat > "$RESULTS_DIR/bundle-analysis.json" << EOF
 }
 EOF
 
-# ==========================================
-# [2/4] Lighthouse Audit
-# ==========================================
 echo ""
 echo "[2/4] Running Lighthouse audit..."
 
@@ -139,9 +131,6 @@ kill $NEXT_PID 2>/dev/null || true
 sleep 2
 kill_port 3000
 
-# ==========================================
-# [3/4] WebSocket Load Test (200 users)
-# ==========================================
 echo ""
 echo "[3/4] Running WebSocket load test (200 concurrent users)..."
 
@@ -171,9 +160,6 @@ fi
 kill $WS_PID 2>/dev/null || true
 sleep 1
 
-# ==========================================
-# [4/4] Event Throughput Test
-# ==========================================
 echo ""
 echo "[4/4] Running event throughput test..."
 
@@ -193,11 +179,8 @@ fi
 
 kill $DEV_PID 2>/dev/null || true
 
-# ==========================================
-# Summary
-# ==========================================
+
 echo ""
-echo "=========================================="
 echo "  Benchmark Complete"
 echo "=========================================="
 echo "Results saved in: $RESULTS_DIR/"
