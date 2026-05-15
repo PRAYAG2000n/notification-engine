@@ -1,10 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "=========================================="
 echo "  NotifyHub - Re-run Failed Tests"
-echo "=========================================="
-
 RESULTS_DIR="./benchmark-results"
 mkdir -p "$RESULTS_DIR"
 
@@ -24,9 +21,6 @@ sudo fuser -k 3000/tcp 2>/dev/null || true
 sudo fuser -k 3001/tcp 2>/dev/null || true
 sleep 2
 
-# ==========================================
-# [1/2] WebSocket Load Test (200 users)
-# ==========================================
 echo ""
 echo "[1/2] Starting WebSocket server on port 3001..."
 
@@ -69,9 +63,6 @@ fi
 kill $WS_PID 2>/dev/null || true
 sleep 1
 
-# ==========================================
-# [2/2] Event Throughput Test
-# ==========================================
 echo ""
 echo "[2/2] Starting dev server for throughput test..."
 
@@ -117,8 +108,7 @@ fi
 kill $DEV_PID 2>/dev/null || true
 
 echo ""
-echo "=========================================="
 echo "  Re-run Complete"
-echo "=========================================="
+
 echo "Results in: $RESULTS_DIR/"
 ls -la "$RESULTS_DIR/"*v2* 2>/dev/null || echo "No new result files."
