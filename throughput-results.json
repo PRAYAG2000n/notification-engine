@@ -1,0 +1,10 @@
+{
+  "totalEvents": 21001,
+  "eventsPerMinute": 10501,
+  "latency": {
+    "avg": "10.12",
+    "p95": "27.00",
+    "p99": "N/A"
+  },
+  "successRate": "100.00%"
+}
