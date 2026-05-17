@@ -79,6 +79,7 @@ jobs:
       - run: npm ci
       - run: npx prisma generate
       - run: npx prisma db push
+      - run: npx tsx prisma/seed.ts
       - run: npx playwright install --with-deps chromium
       - run: npm run build
       - run: npm run test:e2e
